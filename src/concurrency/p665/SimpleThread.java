@@ -33,7 +33,8 @@ public class SimpleThread extends Thread {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
+        int count = 5;
+        for (int i = 0; i < count; i++) {
             new SimpleThread();
         }
     }
