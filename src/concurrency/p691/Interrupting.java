@@ -62,7 +62,7 @@ class SleepBlocker implements Runnable {
  * 不可中断的阻塞示例
  */
 class IOBlocked implements Runnable {
-    private InputStream in;
+    private final InputStream in;
 
     public IOBlocked(InputStream in) {
         this.in = in;
@@ -74,6 +74,7 @@ class IOBlocked implements Runnable {
             System.out.println("Waiting for read()");
             in.read();
         } catch (IOException e) {
+            e.printStackTrace();
             if (Thread.currentThread().isInterrupted()) {
                 System.out.println("Interrupted from blocked I/O");
             } else {
