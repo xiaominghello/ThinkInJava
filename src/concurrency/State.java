@@ -1,3 +1,5 @@
+package concurrency;
+
 import java.util.concurrent.locks.LockSupport;
 
 /**
@@ -28,8 +30,10 @@ public enum State {
      * reenter a synchronized block/method after calling
      * {@link Object#wait() Object.wait}.
      * 等待监视器锁而被阻塞的线程的线程状态。
-     * 处于阻塞状态的线程正在等待监视器锁从而进入同步块/方法，
-     * 或在调用Object.wait后等待监视器锁从而重新输入同步块/方法。
+     * 处于阻塞状态的线程正在等待监视器锁
+     * 来进入同步块/方法，
+     * 或者
+     * 重新进入同步块/方法，在调用Object.wait后。
      */
     BLOCKED,
 
