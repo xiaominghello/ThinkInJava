@@ -23,24 +23,32 @@ class Car {
     private boolean waxOn = false;
 
     public synchronized void waxed() {
+        System.out.println("1");
         waxOn = true;
         notifyAll();
+        System.out.println("1-2");
     }
 
     public synchronized void buffed() {
+        System.out.println("4");
         waxOn = false;
         notifyAll();
+        System.out.println("4-2");
     }
 
     public synchronized void waitForWaxing() throws InterruptedException {
         while (!waxOn) {
+            System.out.println("5");
             wait();
+            System.out.println("3");
         }
     }
 
     public synchronized void waitForBuffing() throws InterruptedException {
         while (waxOn) {
+            System.out.println("2");
             wait();
+            System.out.println("6");
         }
     }
 }
@@ -57,7 +65,7 @@ class WaxOn implements Runnable {
         try {
             while (!Thread.interrupted()) {
                 System.out.println("Wax on!");
-                TimeUnit.MILLISECONDS.sleep(500);
+                TimeUnit.MILLISECONDS.sleep(200);
                 car.waxed();
                 car.waitForBuffing();
             }
@@ -82,7 +90,7 @@ class WaxOff implements Runnable {
             while (!Thread.interrupted()) {
                 car.waitForWaxing();
                 System.out.println("Wax off!");
-                TimeUnit.MILLISECONDS.sleep(500);
+                TimeUnit.MILLISECONDS.sleep(200);
                 car.buffed();
             }
         } catch (InterruptedException e) {
