@@ -1,6 +1,5 @@
 package concurrency.p703collaborate;
 
-import com.sun.xml.internal.xsom.impl.scd.Step;
 import concurrency.p654runnable.LiftOff;
 
 import java.io.BufferedReader;
