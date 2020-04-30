@@ -12,7 +12,7 @@ import java.util.concurrent.*;
  * @Date 2020/4/29 9:14
  */
 public class HorseRace {
-    static final int FINISH_LINE = 75;
+    static final int FINISH_LINE = 50;
     private List<Horse> horses = new ArrayList<>();
     private ExecutorService exec = Executors.newCachedThreadPool();
     private CyclicBarrier barrier;
