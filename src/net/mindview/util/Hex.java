@@ -1,7 +1,5 @@
 package net.mindview.util;
 
-import com.sun.codemodel.internal.fmt.JBinaryFile;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -31,7 +29,7 @@ public class Hex {
 
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
-            System.out.println(format(BinaryFile.read("out/production/ThinkInJava/net/mindview/util/Hex.class")));
+            System.out.println(format(BinaryFile.read("out/production/ThinkingInJava/net/mindview/util/Hex.class")));
         } else {
             System.out.println(format(BinaryFile.read(new File(args[0]))));
         }
