@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 
 /**
+ * split()方法将输入字符串断开成字符串对象数组，断开边界由正则表达式确定
+ *
  * @Author shenxiaowei
  * @Date 2020-05-02 22:33
  */

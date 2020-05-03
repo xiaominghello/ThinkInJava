@@ -3,9 +3,11 @@ package strings.p296regex;
 import java.util.Arrays;
 
 /**
+ *  String类内建功能：将字符串从正则表式匹配的地方切开
  *  public String[] split(String regex)
  *  根据给定正则表达式的匹配拆分此字符串。
  *
+ *  重载版本
  *  public String[] split(String regex, nt limit)
  *  limit 参数控制模式应用的次数，因此影响所得数组的长度。
  *  如果该限制 n 大于 0，则模式将被最多应用 n - 1 次，数组的长度将不会大于 n，

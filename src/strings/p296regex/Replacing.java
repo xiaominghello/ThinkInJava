@@ -1,8 +1,10 @@
 package strings.p296regex;
 
 /**
+ * String类的功能：替换
+ *
  * public String replaceAll(String regex,
-*                           String replacement)
+ *                          String replacement)
  * 使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。
  * 调用此方法的 str.replaceAll(regex, repl) 形式与以下表达式产生的结果完全相同：
  * Pattern.compile(regex).matcher(str).replaceAll(repl)

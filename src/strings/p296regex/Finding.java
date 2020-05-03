@@ -4,6 +4,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * public boolean find()
+ * 尝试查找与该模式匹配的输入序列的下一个子序列。
+ * 可以用来在CharSequence中查找多个匹配
+ *
  * public boolean find(int start)
  * 重置此匹配器，然后尝试查找匹配该模式、从指定索引开始的输入序列的下一个子序列。
  *

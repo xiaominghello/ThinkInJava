@@ -1,6 +1,7 @@
 package strings.p296regex;
 
 /**
+ * String类内建功能  检查字符串是否匹配如上所述正则表达式
  * public boolean matches(String regex)
  * 告知此字符串是否匹配给定的正则表达式。
  * 调用此方法的 str.matches(regex) 形式与以下表达式产生的结果完全相同：

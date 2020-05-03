@@ -11,19 +11,19 @@ import java.util.regex.Pattern;
  *
  * CANON_EQ
  *           启用规范等价。
- * CASE_INSENSITIVE
+ * CASE_INSENSITIVE(?i)
  *           启用不区分大小写的匹配。
- * COMMENTS
+ * COMMENTS(?x)
  *           模式中允许空白和注释。
- * DOTALL
+ * DOTALL(?s)
  *           启用 dotall 模式。
  * LITERAL
  *           启用模式的字面值解析。
- * MULTILINE
+ * MULTILINE(?m)
  *           启用多行模式。
- * UNICODE_CASE
+ * UNICODE_CASE(?u)
  *           启用 Unicode 感知的大小写折叠。
- * UNIX_LINES
+ * UNIX_LINES(?d)
  *           启用 Unix 行模式。
  *
  * @Author shenxiaowei
