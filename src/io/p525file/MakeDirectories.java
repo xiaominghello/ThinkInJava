@@ -3,6 +3,10 @@ package io.p525file;
 import java.io.File;
 
 /**
+ * 创建文件
+ * 重命名文件
+ * 删除文件
+ *
  * @Author shenxiaowei
  * @Date 2020-05-02 11:17
  */
@@ -38,14 +42,14 @@ public class MakeDirectories {
     public static void main(String[] args) {
         // 创建文件
         args = new String[]{"MakeDirectoriesTest"};
-        // 删除文件
-//        args = new String[]{"-d","MakeDirectoriesTest"};
         // 修改文件名
-//        args = new String[]{"-r","MakeDirectoriesTest", "newName"};
+//        args = new String[]{"-r","MakeDirectoriesTest", "MakeDirectoriesTest2"};
+        // 删除文件
+//        args = new String[]{"-d","MakeDirectoriesTest2"};
         if (args.length < 1) {
             usage();
         }
-        if (args[0].equals("-r")) {
+        if ("-r".equals(args[0])) {
             if (args.length != 3) {
                 usage();
             }
@@ -59,7 +63,7 @@ public class MakeDirectories {
         }
         int count = 0;
         boolean del = false;
-        if (args[0].equals("-d")) {
+        if ("-d".equals(args[0])) {
             count++;
             del = true;
         }
