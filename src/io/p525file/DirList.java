@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 
 /**
- * File
+ * File 面向对象编程，即文件和目录路径名也是对象。
  * 文件和目录路径名的抽象表示形式。
  *
  * public String[] list()
@@ -21,6 +21,8 @@ import java.util.regex.Pattern;
 public class DirList {
     public static void main(String[] args) {
         args = new String[]{"\\.\\w*"};
+        // @Test下的相对路径和main()下的相对路径相对是不同的
+        // 相对路径，相对于当前project  C:\Users\Administrator\IdeaProjects\ThinkingInJava
         File path = new File(".");
         System.out.printf("%-20s %b\n","path.exists():", path.exists());
         System.out.printf("%-20s %b\n","path.isDirectory():", path.isDirectory());
