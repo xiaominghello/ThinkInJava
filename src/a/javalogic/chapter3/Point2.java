@@ -58,6 +58,11 @@ public class Point2 {
         this(0, 0);
     }
 
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
+    }
+
     public static void main(String[] args) {
         Point2 point2 = new Point2();
         point2.setX(3);
